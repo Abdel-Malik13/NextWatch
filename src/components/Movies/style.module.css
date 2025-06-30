@@ -1,0 +1,22 @@
+.customCard {
+    background: #171625;
+    /* padding: 20px; */
+    /* border-radius: 10px; */
+    box-shadow: 0 4px 8px rgba(23, 22, 37, 0.5);
+}
+
+.customCard:hover {
+    box-shadow: 0 8px 16px rgba(125, 119, 209, 0.5);
+}
+
+.customCardBody {
+    background-color: #171625 !important;
+}
+
+.cardTitle {
+    color: #fff;
+}
+
+.btnFavorite {
+    color: #171625;
+}
