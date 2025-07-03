@@ -7,6 +7,8 @@ export function Movies({ filteredMovies, favorites, toggleFavorite }) {
     <div className="row">
       {filteredMovies.map((movie) => {
         const isFavorite = favorites.some((f) => f.id === movie.id);
+        console.log(isFavorite);
+
         return (
           <div key={movie.id} className="col-3" style={{ marginBottom: 30 }}>
             <div className={`card ${styles.customCard}`}>

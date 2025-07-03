@@ -14,11 +14,11 @@ export function Favorite({ favorites }) {
               <div key={fav.id} className="col-2">
                 <img
                   src={`https://image.tmdb.org/t/p/w185/${fav.poster_path}`}
-                  alt={fav.title}
+                  alt={fav.title || fav.name}
                 />
                 <div className="card-body">
                   <h5 className={`card-title ${styles.cardTitle}`}>
-                    {fav.title}
+                    {fav.title || fav.name}
                   </h5>
                 </div>
               </div>

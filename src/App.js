@@ -37,7 +37,6 @@ function App() {
       })
       .then((data) => {
         setSeries(data.results);
-        console.log(data.results);
       });
   }, []);
 

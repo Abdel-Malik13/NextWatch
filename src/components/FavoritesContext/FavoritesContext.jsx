@@ -16,14 +16,14 @@ export function FavoritesProvider({ children }) {
     localStorage.setItem("favorites", JSON.stringify(favorites));
   }, [favorites]);
 
-  const toggleFavorite = (film) => {
-    const isFavorite = favorites.find((f) => f.id === film.id);
-    console.log(favorites.find((f) => f.id === film.id));
+  const toggleFavorite = (data) => {
+    const isFavorite = favorites.find((f) => f.id === data.id);
+    console.log(favorites.find((f) => f.id === data.id));
 
     if (isFavorite) {
-      setFavorites(favorites.filter((f) => f.id !== film.id));
+      setFavorites(favorites.filter((f) => f.id !== data.id));
     } else {
-      setFavorites([...favorites, film]);
+      setFavorites([...favorites, data]);
     }
   };
 

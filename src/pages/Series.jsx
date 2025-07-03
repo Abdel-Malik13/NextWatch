@@ -10,8 +10,6 @@ export function Series() {
   const [filter, setFilter] = useState("");
   const { favorites, toggleFavorite } = useContext(FavoritesContext);
 
-  console.log(series);
-
   const filteredSeries = series.filter((serie) =>
     (serie.title || serie.name || "")
       .toLowerCase()

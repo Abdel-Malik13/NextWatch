@@ -6,7 +6,9 @@ export function Serie({ filteredSeries, favorites, toggleFavorite }) {
   return (
     <div className="row">
       {filteredSeries.map((serie) => {
-        const isFavorite = favorites.some((s) => s.id === serie.id);
+        const isFavorite = favorites.some((f) => f.id === serie.id);
+        console.log(isFavorite);
+
         return (
           <div key={serie.id} className="col-3" style={{ marginBottom: 30 }}>
             <div className={`card ${styles.customCard}`}>
@@ -17,7 +19,7 @@ export function Serie({ filteredSeries, favorites, toggleFavorite }) {
                 <img
                   className="card-img-top"
                   src={`https://image.tmdb.org/t/p/original/${serie.poster_path}`}
-                  alt={serie.title}
+                  alt={serie.title || serie.name}
                 />
               </Link>
               <div className={`card-body ${styles.customCardBody}`}>
@@ -27,7 +29,7 @@ export function Serie({ filteredSeries, favorites, toggleFavorite }) {
                 {/* <p className="card-text">Résumé : {movie.overview}</p> */}
                 <FavoriteBtn
                   toggleFavorite={toggleFavorite}
-                  movie={serie}
+                  data={serie}
                   isFavorite={isFavorite}
                 />
               </div>
