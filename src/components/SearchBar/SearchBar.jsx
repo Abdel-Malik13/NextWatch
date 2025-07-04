@@ -1,10 +1,11 @@
+import styles from './style.module.css';
+
 export function SearchBar({ filter, setFilter, placeholder }) {
   return (
     <div className="row">
       <div className="col-12">
         <input
-          className="form-control form-control-lg"
-          style={{ marginTop: 30, marginBottom: 30 }}
+          className={`form-control form-control-lg ${styles.customInput}`}
           type="text"
           placeholder={placeholder}
           value={filter}

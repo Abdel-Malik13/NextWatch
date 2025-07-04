@@ -1,0 +1,10 @@
+.customInput {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: #1d1b2c;
+    border: #252338 3px solid;
+}
+
+.customInput::placeholder {
+    color: #7c7a87;
+}
